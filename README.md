@@ -16,6 +16,11 @@ Invoke the method from the above files with `ruby <name>`
 - GitHub: [@VICTOR-CHUKWU](https://github.com/VICTOR-CHUKWU)
 - LinkedIn: [Victor-chukwu](https://www.linkedin.com/in/victor-chukwu-95a020143)
 
+👤 **Lilian Francis**
+
+- Github : [@lilyfrancis](https://github.com/lilyfrancis)
+- Twitter: [@ifnotlily](https://twitter.com/ifnotlily)
+- LinkdIn : [@lilianfrancis](https://www.linkedin.com/in/lilianfrancis/)
 
 👤 **SAMAN ATSHI**
 
