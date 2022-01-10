@@ -1,3 +1,4 @@
+# rubocop:disable Layout/LineLength
 require_relative './classes/item'
 
 class App
@@ -22,3 +23,4 @@ end
 temp = App.new
 
 temp.entry_msg
+# rubocop:enable Layout/LineLength
