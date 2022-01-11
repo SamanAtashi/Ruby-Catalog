@@ -3,7 +3,7 @@ class Item
 
     attr_reader :id , :archived
 
-  def initialize(pbd)
+  def initialize(pbd:0)
     @id = rand(0..1000)
     @publish_date = pbd
     @archived = false
