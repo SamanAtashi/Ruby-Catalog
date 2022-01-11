@@ -8,18 +8,18 @@ class Genre
         @id = rand(0..1000)
         @name=""
         @items = []
-        @item_class = Item.new
-        @item_class.genre = self
     end
 
     def add_item
+        @item_class = Item.new
+        @item_class.genre = self
         # p @item_class
         @items<<@item_class
     end
 end
 
-temp = Genre.new
+# temp = Genre.new
 
-temp.add_item
+# temp.add_item
 
-p temp 
+# p temp 
