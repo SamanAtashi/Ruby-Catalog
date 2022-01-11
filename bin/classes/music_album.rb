@@ -6,8 +6,20 @@ class MusicAlbum < Item
     def initialize
         @on_spotify=true
     end
+
+    # private
+
+    def can_be_archived?
+        if (@archived && @on_spotify)
+            return true
+        else 
+            return false
+        end
+    end
 end
 
-# temp = Item.new(12)
+temp = Item.new(12)
+temp2 = MusicAlbum.new
 
-# p temp
+p temp
+p temp2.can_be_archived?
