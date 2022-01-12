@@ -1,21 +1,20 @@
 class Item
-  attr_accessor :genre, :author, :source, :label, :publish_date
-
+  attr_accessor :genre, :author, :source, :label
     attr_reader :id , :archived
 
-  def initialize(pbd=0)
-    @id = rand(0..1000)
+  def initialize(pbd:Time.now , archived:false)
+    @id = rand(1..1000)
     @publish_date = pbd
-    @archived = false
+    @archived = archived
   end
 
   def move_to_archive
-    can_be_archived? ? @archived = true : nil
+    @archived = true if can_be_archived?
   end
 
   private
 
   def can_be_archived?
-    @publish_date >= 10
+    Time.now.year - @publish_date >= 10
   end
 end

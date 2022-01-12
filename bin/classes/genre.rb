@@ -4,9 +4,9 @@ class Genre
     attr_accessor :name
     attr_reader :id ,:items
 
-    def initialize
+    def initialize(name)
         @id = rand(0..1000)
-        @name=""
+        @name=name
         @items = []
     end
 
