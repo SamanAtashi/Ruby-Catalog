@@ -1,8 +1,8 @@
 class Item
   attr_accessor :genre, :author, :source, :label
-    attr_reader :id , :archived
+  attr_reader :id, :archived
 
-  def initialize(pbd:Time.now , archived:false)
+  def initialize(pbd, archived: false)
     @id = rand(1..1000)
     @publish_date = pbd
     @archived = archived
@@ -12,7 +12,7 @@ class Item
     @archived = true if can_be_archived?
   end
 
-  private
+  #   private
 
   def can_be_archived?
     Time.now.year - @publish_date >= 10
