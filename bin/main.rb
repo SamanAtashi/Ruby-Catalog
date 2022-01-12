@@ -1,26 +1,63 @@
-# rubocop:disable Layout/LineLength
-require_relative './classes/item'
+class Main
+  def initialize
+    @choice = 0
+    @books = []
+    @music_albums = []
+    @games = []
+    @genres = []
+    @authors = []
+    @labels = []
+  end
 
-class App
-  def entry_msg
-    loop do
-      options = ['List all books', 'List all music albums', 'List all movies', 'List of games', 'List all genres',
-                 'List all labels', 'List all authors', 'List all sources', 'Add a book', 'Add a music album', 'Add a movie', 'Add a game', 'Exit']
-      options.each_with_index { |option, idx| puts "#{idx + 1} - #{option}" }
-      option = gets.chomp
-      case option
-      when '13'
-        puts 'Thank you for using this app!😀', "\n"
-        break
-      else
-        clear
-        puts '⚠️  Please enter a number between 1 and 7', "\n"
+  def run_app
+    puts 'Welcome to the catalog!'
+    sleep 0.75
+  end
+
+  def show_options
+    puts 'Please choose an option by entering a number:'
+    puts '1 - List all books'
+    puts '2 - List all music albums'
+    puts '3 - List all games'
+    puts '4 - List all labels'
+    puts '5 - List all genres'
+    puts '6 - List all authors'
+    puts '7 - Add a book'
+    puts '8 - Add a music album'
+    puts '9 - Add a game'
+    puts '10 - Exit'
+  end
+
+  # rubocop:disable Metrics
+  def select_option(_user_choice)
+    case @choice
+    when 1
+      list_books
+    when 2
+      list_music_album
+    when 3
+      list_games
+    when 4
+      list_labels
+    when 5
+      list_genres
+    when 6
+      list_authors
+    when 7
+      add_book_menu
+    when 8
+      add_music_album_menu
+    when 9
+      add_game_menu
+    else
+      if @choice != 7
+        puts 'Invalid input, please try again'
+        puts
       end
     end
   end
 end
 
-temp = App.new
+# rubocop:enable Metrics
 
-temp.entry_msg
-# rubocop:enable Layout/LineLength
+Main.new.run_app
