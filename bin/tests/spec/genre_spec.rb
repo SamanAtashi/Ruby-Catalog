@@ -1,7 +1,8 @@
 require_relative '../../classes/genre'
 
 describe Genre do
-  subject(:genre) { Genre.new }
+  subject(:genre) { Genre.new("Rock") }
+  subject(:item) { Item.new(1999) }
 
   it 'It is the same class type as Genre class' do
     expect(genre).to be_a Genre
@@ -20,5 +21,7 @@ describe Genre do
   end
 
   it '#add_item should add Item-class to the items property of Genre' do
+    genre.add_item(item)
+    expect(item.genre).to be(genre)
   end
 end
