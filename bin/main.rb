@@ -2,6 +2,7 @@
 require_relative './methods/create_music_album'
 require_relative './methods/list_music_album'
 require_relative './utilities/storing_data'
+require_relative './utilities/reading_data'
 
 class App
   def initialize
@@ -14,6 +15,10 @@ class App
   end
 
   def run_menu
+    # ! make a separate method later
+    reading_data_class = ReadingDataClass.new(@list_of_music_albums)
+    reading_data_class.run
+
     loop do
       @options.each_with_index { |option, idx| puts "#{idx + 1} - #{option}" }
       option = gets.chomp

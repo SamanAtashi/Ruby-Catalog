@@ -18,6 +18,6 @@ class StoreMusicAlbumClass
     # File.write('./bin/data/music_albums.json') do |f|
     #   f.write(data.to_json)
     # end
-    File.write('./bin/data/music_albums.json', data.to_json , mode: "a") unless data.empty?
+    File.write('./bin/data/music_albums.json', data.to_json, mode: 'a') unless data.empty?
   end
 end
