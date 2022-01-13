@@ -22,8 +22,8 @@ class CreateNewMusicAlbumClass
     [name, pd, sp]
   end
 
-  def creates_a_music_album(name, pd, sp)
-    new_music_album = MusicAlbum.new(name, pd, on_spotify: sp)
+  def creates_a_music_album(name, pbd, spo)
+    new_music_album = MusicAlbum.new(name, pbd, on_spotify: spo)
     @music_albums << new_music_album
   end
 end
