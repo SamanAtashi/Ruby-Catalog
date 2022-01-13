@@ -3,15 +3,17 @@ require_relative './methods/create_music_album'
 require_relative './methods/list_music_album'
 require_relative './utilities/storing_data'
 require_relative './utilities/reading_data'
+require_relative './classes/manage_book'
+require_relative './classes/option_message'
 
 class App
   def initialize
     @list_of_music_albums = []
+    @list_of_books = []
     @list_all_music_album_class = ListAllMusicAlbumClass.new(@list_of_music_albums)
     @create_music_album_class = CreateNewMusicAlbumClass.new(@list_of_music_albums)
+    @manage_book_class = ManagerBook.new(@list_of_books)
 
-    @options = ['List all books', 'List all music albums', 'List all movies', 'List of games', 'List all genres',
-                'List all labels', 'List all authors', 'List all sources', 'Add a book', 'Add a music album', 'Add a movie', 'Add a game', 'Exit']
   end
 
   def run_menu
@@ -20,15 +22,18 @@ class App
     reading_data_class.run
 
     loop do
-      @options.each_with_index { |option, idx| puts "#{idx + 1} - #{option}" }
+      options_message
       option = gets.chomp
 
       case option
+      when '1' then @manage_book_class.all_books
       when '2' then @list_all_music_album_class.run
-      when '10' then @create_music_album_class.run
-      when '13'
+      when '7' then @manage_book_class.create_book
+      when '8' then @create_music_album_class.run
+      when '10'
         storing_data_class = StoringDataClass.new(@list_of_music_albums)
         storing_data_class.run
+        @manage_book_class.save_books
         puts 'Thank you for using this app!😀', "\n"
         break
       else
