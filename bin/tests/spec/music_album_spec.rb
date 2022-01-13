@@ -1,7 +1,7 @@
 require_relative '../../classes/music_album'
 
 describe MusicAlbum do
-  subject(:music) { MusicAlbum.new(1999,on_spotify:true) }
+  subject(:music) { MusicAlbum.new(1999, on_spotify: true) }
 
   it 'should have `on_spotify` property and be an Bool' do
     expect(music.on_spotify).to be(true).or be(false)

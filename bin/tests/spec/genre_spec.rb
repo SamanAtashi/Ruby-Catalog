@@ -1,7 +1,7 @@
 require_relative '../../classes/genre'
 
 describe Genre do
-  subject(:genre) { Genre.new("Rock") }
+  subject(:genre) { Genre.new('Rock') }
   subject(:item) { Item.new(1999) }
 
   it 'It is the same class type as Genre class' do
