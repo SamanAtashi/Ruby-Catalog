@@ -23,3 +23,23 @@ CREATE TABLE music_album (
     FOREIGN KEY (id)
       REFERENCES item(id)
 );
+
+CREATE TABLE books(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  publisher CHAR(50),
+  cover_state CHAR(10),
+  published_date DATE,
+  archived BOOLEAN,
+  author_id INT,
+  label_id  INT,
+  FOREIGN KEY(author_id) REFERENCES authors(id),
+  FOREIGN KEY(label_id) REFERENCES labels(id),
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE labels(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  title CHAR(50),
+  color CHAR(50),
+  PRIMARY KEY(id)
+);
