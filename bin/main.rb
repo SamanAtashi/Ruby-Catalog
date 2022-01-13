@@ -1,4 +1,3 @@
-# rubocop:disable Layout/LineLength
 require_relative './methods/create_music_album'
 require_relative './methods/list_music_album'
 require_relative './utilities/storing_data'
@@ -13,7 +12,6 @@ class App
     @list_all_music_album_class = ListAllMusicAlbumClass.new(@list_of_music_albums)
     @create_music_album_class = CreateNewMusicAlbumClass.new(@list_of_music_albums)
     @manage_book_class = ManagerBook.new(@list_of_books)
-
   end
 
   def run_menu
@@ -37,7 +35,7 @@ class App
         puts 'Thank you for using this app!😀', "\n"
         break
       else
-        puts '⚠️  Please enter a number between 1 and 7', "\n"
+        puts '⚠️  Please enter a number between 1 and 10', "\n"
       end
     end
   end
@@ -46,4 +44,3 @@ end
 temp = App.new
 
 temp.run_menu
-# rubocop:enable Layout/LineLength

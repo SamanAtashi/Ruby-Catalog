@@ -12,12 +12,11 @@ class StoreMusicAlbumClass
       data.push([item.name, item.publish_date, item.on_spotify])
     end
 
-    p data
     File.new('./bin/data/music_albums.json', 'w+') unless File.exist?('./bin/data/music_albums.json')
 
     # File.write('./bin/data/music_albums.json') do |f|
     #   f.write(data.to_json)
     # end
-    File.write('./bin/data/music_albums.json', data.to_json, mode: 'a') unless data.empty?
+    File.write('./bin/data/music_albums.json', data.to_json, mode: 'w+') unless @music_albums.empty?
   end
 end
