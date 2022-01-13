@@ -7,8 +7,8 @@ class CreateNewMusicAlbumClass
 
   def run
     info = ask_for_info
-    creates_a_music_album(info[0],info[1],info[2])
-    puts "Music Album created successfully ✅"
+    creates_a_music_album(info[0], info[1], info[2])
+    puts 'Music Album created successfully ✅'
   end
 
   def ask_for_info
@@ -23,7 +23,7 @@ class CreateNewMusicAlbumClass
   end
 
   def creates_a_music_album(name, pd, sp)
-    new_music_album = MusicAlbum.new(name,pd,on_spotify:sp)
-    @music_albums<<new_music_album
+    new_music_album = MusicAlbum.new(name, pd, on_spotify: sp)
+    @music_albums << new_music_album
   end
 end

@@ -1,6 +1,7 @@
 # rubocop:disable Layout/LineLength
 require_relative './methods/create_music_album'
 require_relative './methods/list_music_album'
+require_relative './utilities/storing_data'
 
 class App
   def initialize
@@ -21,6 +22,8 @@ class App
       when '2' then @list_all_music_album_class.run
       when '10' then @create_music_album_class.run
       when '13'
+        storing_data_class = StoringDataClass.new(@list_of_music_albums)
+        storing_data_class.run
         puts 'Thank you for using this app!😀', "\n"
         break
       else
