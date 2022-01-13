@@ -1,10 +1,11 @@
 # rubocop:disable Layout/LineLength
 require_relative './methods/create_music_album'
+require_relative './methods/list_music_album'
 
 class App
   def initialize
     @list_of_music_albums = []
-    # @list_all_music_album_class = ListAllMusicAlbumClass.new(@list_of_music_albums)
+    @list_all_music_album_class = ListAllMusicAlbumClass.new(@list_of_music_albums)
     @create_music_album_class = CreateNewMusicAlbumClass.new(@list_of_music_albums)
 
     @options = ['List all books', 'List all music albums', 'List all movies', 'List of games', 'List all genres',
@@ -17,6 +18,7 @@ class App
       option = gets.chomp
 
       case option
+      when '2' then @list_all_music_album_class.run
       when '10' then @create_music_album_class.run
       when '13'
         puts 'Thank you for using this app!😀', "\n"
