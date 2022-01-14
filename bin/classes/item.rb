@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :author, :label
+  attr_accessor :label
   attr_reader :id, :archived, :genre, :author, :publish_date
 
   def initialize(pbd, archived: false)

@@ -6,7 +6,7 @@ class ManagerBook
   attr_accessor :books, :books_json
 
   def initialize(books = [])
-    book_file = 'books.json'
+    book_file = './bin/data/books.json'
     @books_json = []
     @books = books
     if File.exist? book_file
@@ -33,7 +33,7 @@ class ManagerBook
 
   def save_books
     obj = to_json_obj
-    File.open('books.json', 'w') { |f| f.write obj }
+    File.open('./bin/data/books.json', 'w') { |f| f.write obj }
   end
 
   def create_book
