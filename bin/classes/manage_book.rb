@@ -1,3 +1,4 @@
+# rubocop:disable Style/FileWrite
 require 'json'
 # require './book'
 require_relative './book'
@@ -89,3 +90,4 @@ class ManagerBook
     tmp
   end
 end
+# rubocop:enable Style/FileWrite

@@ -1,3 +1,4 @@
+# rubocop:disable Style/FileWrite
 require 'json'
 # require './book'
 require_relative './game'
@@ -85,3 +86,4 @@ class ManagerGame
     tmp
   end
 end
+# rubocop:enable Style/FileWrite
