@@ -16,8 +16,8 @@ class App
     @create_music_album_class = CreateNewMusicAlbumClass.new(@list_of_music_albums)
     @manage_book_class = ManagerBook.new(@list_of_books)
     @manage_label_class = ManagerLabel.new
-    @list_of_genres=ListGenreClass.new
-    @list_of_authors=ListAuthorClass.new
+    @list_of_genres = ListGenreClass.new
+    @list_of_authors = ListAuthorClass.new
   end
 
   # rubocop:disable Metrics/MethodLength
