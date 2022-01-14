@@ -4,7 +4,8 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
-    # - "bin/classes/manage_book.rb"
+    - "bin/classes/manage_book.rb"
+    - "bin/classes/manage_game.rb"
 
   DisplayCopNames: true
 
