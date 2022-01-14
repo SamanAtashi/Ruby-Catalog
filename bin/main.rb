@@ -6,6 +6,7 @@ require_relative './classes/manage_book'
 require_relative './classes/manage_label'
 require_relative './classes/option_message'
 require_relative './methods/list_genres'
+require_relative './methods/list_author'
 
 class App
   def initialize
@@ -16,6 +17,7 @@ class App
     @manage_book_class = ManagerBook.new(@list_of_books)
     @manage_label_class = ManagerLabel.new
     @list_of_genres=ListGenreClass.new
+    @list_of_authors=ListAuthorClass.new
   end
 
   # rubocop:disable Metrics/MethodLength
@@ -33,6 +35,7 @@ class App
       when '2' then @list_all_music_album_class.run
       when '4' then @list_of_genres.lists_genres
       when '5' then @manage_label_class.label_list
+      when '6' then @list_of_authors.lists_authors
       when '7' then @manage_book_class.create_book
       when '8' then @create_music_album_class.run
       when '10'

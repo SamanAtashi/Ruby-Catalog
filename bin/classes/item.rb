@@ -1,6 +1,6 @@
 class Item
-  attr_accessor :author, :source, :label
-  attr_reader :id, :archived, :genre, :publish_date
+  attr_accessor :author, :label
+  attr_reader :id, :archived, :genre , :author, :publish_date
 
   def initialize(pbd, archived: false)
     @id = rand(1..1000)
@@ -11,6 +11,11 @@ class Item
   def genre=(genre)
     @genre = genre
     genre.items.push(self) unless genre.items.include?(self)
+  end
+
+  def author=(author)
+    @author = author
+    author.items.push(self) unless author.items.include?(self)
   end
 
   def move_to_archive
