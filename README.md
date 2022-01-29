@@ -2,7 +2,7 @@
 An app for your catalog can show and store your favorite books, music albums, games.
 
 ## Getting Started
-Clone the project: `https://github.com/SamanAtashi/Ruby-Catalog.git`
+Clone the project: `https://github.com/lilyfrancis/Ruby-Catalog.git`
 Skip if you already have ruby installed; otherwise, download `ruby` install it on your system
 Locate the `main.rb`
 Invoke the method from the above files with `ruby <name>`
